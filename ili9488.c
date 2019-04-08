@@ -1,4 +1,3 @@
-#define DEBUG
 /*
  * Copyright (C) 2019, Elkami
  */
@@ -384,7 +383,7 @@ static int ili9488c_dsi_remove(struct mipi_dsi_device *dsi)
 }
 
 static const struct of_device_id ili9488c_of_match[] = {
-	{ .compatible = "ilitek,ili9488_dev" },
+	{ .compatible = "ilitek,ili9488" },
 	{ }
 };
 MODULE_DEVICE_TABLE(of, ili9488c_of_match);
@@ -393,7 +392,7 @@ static struct mipi_dsi_driver ili9488c_dsi_driver = {
 	.probe		= ili9488c_dsi_probe,
 	.remove		= ili9488c_dsi_remove,
 	.driver = {
-		.name		= "ili9488_dev",
+		.name		= "ili9488",
 		.of_match_table	= ili9488c_of_match,
 	},
 };
